@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #2e2d53;
+    color: #bc0284;
+}
+
+header{
+    width: 100%;
+    border: 2px solid red;
+    padding: 20px;
+    margin: 0px 0px 50px 0px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+.menu li{
+    padding: 3px;
+    margin: 5px;
+    background-color: bc0284;
+    position: relative;
+    text-align: center;
+}
+
+.menu li a{
+    background: transparent;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: azure;
+}
+
+.menu li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: #bc0284;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s ease-out;
+}
+
+.menu li:hover::before{
+    width: 100%;
+}
+
+.contenido-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion{
+    display: flex;
+    border: 1px solid rgb(17, 255, 0);
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;    
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+.presentacion-nombre h1{
+    flex-direction: column;
+    border:1px solid red;
+    padding: 10px;
+    font-size: 80px;
+}
+
+.presentacion-nombre h4{
+    flex-direction: column;
+    border:1px solid red;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.animate__animated.animate__bounceInLeft{
+    --animate-duration: 2s;
+    --animate-delay: 0s;
+}
+
+.animate__animated.animate__bounceInRight{
+    --animate-duration: 2s;
+    --animate-delay: 0s;
+}
+
+.presentacion-foto img{
+    width: 400px;
+    border:1px solid red;
+}
+
+.sobre-mi{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;    
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+.sobre-mi-img img{
+    width: 500px;
+    border:1px solid red;
+    margin: 80px;
+}
+
+.sobre-mi-texto{
+    border:1px solid red;
+    padding: 20px;
+    font-size: 20px;
+    margin: 40px 40px 40px 80px;
+}
+
+.tecnologias{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80%;    
+    align-self: center;
+    margin-bottom: 150px;
+}
+
+.tecnologias-titulo{
+    border: 1px solid red;
+    padding: 10px;
+    font-size:30px;
+    font-family: sans-serif;
+}
+
+.tecnologias-iconos{
+    font-size: 90px;
+    text-align: center;
+    padding: 40px;
+}
+
+.tecnologias-iconos i{
+    padding: 40px;
+}
+
+.formulario-container{
+    width: 80%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+.formulario-info{
+    font-size: 30px;
+}
+
+.formulario-cuerpo{
+    width: 50%;
+    border: 1px solid orange; 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 25px;
+}
+
+.formulario-campos{
+    border: 1px solid yellow;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulario-campos .campo-nombre{
+    border: 1px solid rgb(30, 201, 11);
+    padding: 10px;
+    width: 100%;
+}
+
+.formulario-campos .campo-nombre input{
+    border: 1px solid rgb(30, 201, 11);
+    width: 100%;
+}
+
+.formulario-campos .campo-email{
+    border: 1px solid rgb(88, 88, 8);
+    padding: 10px;
+}
+
+.formulario-campos .campo-email input{
+    border: 1px solid rgb(30, 201, 11);
+    width: 100%;
+}
+
+.campo-mensaje{
+    width: 100%;
+    margin: auto;
+    border: 3px solid rgb(139, 4, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea{
+    width: 400px;
+    height: 200px;
+}
