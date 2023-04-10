@@ -3,223 +3,196 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #2e2d53;
-    color: #bc0284;
+    color: #fefefe;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 
 header{
     width: 100%;
-    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu{
+    font-size: 20px;
     padding: 20px;
-    margin: 0px 0px 50px 0px;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu ul{
-    display: flex;
-    justify-content: right;
-    list-style: none;
-}
-
-.menu li{
-    padding: 3px;
-    margin: 5px;
-    background-color: bc0284;
-    position: relative;
-    text-align: center;
-}
-
-.menu li a{
-    background: transparent;
-    font-size: 1rem;
-    font-family: sans-serif;
-}
-
-.menu a{
-    text-decoration: none;
-}
-
-.menu a:hover{
-    color: azure;
-}
-
-.menu li::before{
-    content: "";
-    height: 3px;
-    width: 0%;
-    background-color: #bc0284;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s ease-out;
-}
-
-.menu li:hover::before{
-    width: 100%;
 }
 
 .contenido-principal{
     display: flex;
     flex-direction: column;
+    justify-content: space-between; 
 }
 
-.presentacion{
+.contenedor{
     display: flex;
-    border: 1px solid rgb(17, 255, 0);
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;    
-    align-self: center;
-    margin-bottom: 150px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    overflow: auto;
+    max-width: 1300px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.presentacion-nombre h1{
+.presentacion-texto{
+    display: flex;
     flex-direction: column;
-    border:1px solid red;
+    justify-content: center;
+}
+
+.presentacion-nombre {
+    flex-direction: column;
     padding: 10px;
-    font-size: 80px;
 }
 
-.presentacion-nombre h4{
-    flex-direction: column;
-    border:1px solid red;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+h1{
+    font-size: 7rem;
 }
 
-.animate__animated.animate__bounceInLeft{
-    --animate-duration: 2s;
-    --animate-delay: 0s;
+h2 , h4{
+    font-size: 2rem;
+    align-self: flex-start;
 }
 
-.animate__animated.animate__bounceInRight{
-    --animate-duration: 2s;
-    --animate-delay: 0s;
+h5{
+    font-size: 1rem;
 }
 
 .presentacion-foto img{
-    width: 400px;
-    border:1px solid red;
-}
-
-.sobre-mi{
-    border: 1px solid red;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;    
-    align-self: center;
-    margin-bottom: 150px;
+    width: 300px;
 }
 
 .sobre-mi-img img{
-    width: 500px;
-    border:1px solid red;
-    margin: 80px;
+    width: 400px;
 }
 
 .sobre-mi-texto{
-    border:1px solid red;
-    padding: 20px;
-    font-size: 20px;
-    margin: 40px 40px 40px 80px;
+    font-size: 1rem;
 }
 
-.tecnologias{
-    border: 1px solid red;
+.contenedor-tecnologias{
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    width: 80%;    
-    align-self: center;
-    margin-bottom: 150px;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    overflow: auto;
+    max-width: 1300px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .tecnologias-titulo{
-    border: 1px solid red;
-    padding: 10px;
     font-size:30px;
     font-family: sans-serif;
+    width: 50%;
+    align-self: flex-start;
 }
 
 .tecnologias-iconos{
+    display: flex;
+    justify-content: center;
     font-size: 90px;
-    text-align: center;
+    width: 100%;
     padding: 40px;
 }
 
 .tecnologias-iconos i{
-    padding: 40px;
+    padding: 20px;
 }
 
-.formulario-container{
-    width: 80%;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
+.formulario-titulo{
+    display: inline-block;
+    align-self: flex-start;
 }
 
-.formulario-info{
-    font-size: 30px;
-}
-
-.formulario-cuerpo{
-    width: 50%;
-    border: 1px solid orange; 
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 25px;
+form label{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .formulario-campos{
-    border: 1px solid yellow;
-    margin: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.formulario-input{
+    background-color: white;
+    border-radius: 5px;
     width: 100%;
+    padding: 5px;
 }
 
-.formulario-campos .campo-nombre{
-    border: 1px solid rgb(30, 201, 11);
-    padding: 10px;
-    width: 100%;
+.btn{
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #5e64c0;
 }
 
-.formulario-campos .campo-nombre input{
-    border: 1px solid rgb(30, 201, 11);
-    width: 100%;
+@media (max-width: 576px){
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contenedor-tecnologias{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .tecnologias-iconos{
+        padding: 10px;
+    }
+    .presentacion-nombre {
+        padding-bottom: 30px;
+    }
+
+    .sobre-mi-texto{
+        padding-top: 40px;
+    }
+
+    .formulario-cuerpo{
+        padding-top: 30px;
+    }
 }
 
-.formulario-campos .campo-email{
-    border: 1px solid rgb(88, 88, 8);
-    padding: 10px;
+@media (max-width: 768px){
+    .contenedor{
+      padding: 30px 30px;
+    }
+    .sobre-mi-texto{
+        padding-left: 40px;
+    }
 }
 
-.formulario-campos .campo-email input{
-    border: 1px solid rgb(30, 201, 11);
-    width: 100%;
-}
+@media (max-width: 992px){
+    .contenedor{
+        padding: 40px 40px;
+      }
 
-.campo-mensaje{
-    width: 100%;
-    margin: auto;
-    border: 3px solid rgb(139, 4, 218);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .contenedor-tecnologias{
+        padding: 40px;
+    }
 
-textarea{
-    width: 400px;
-    height: 200px;
+    .presentacion-nombre{
+       padding: auto;
+    }
+
+    .sobre-mi-texto{
+        padding-left: 40px;
+    }
+
+    h5{
+        padding-right: 40px;
+    }
 }
