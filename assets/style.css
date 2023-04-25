@@ -2,26 +2,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #2e2d53;
-    color: #fefefe;
+    background-color: #f1ebeb;
+    color: #000000;
 }
 
 body{
     display: flex;
     flex-direction: column;
-}
-
-
-header{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .menu{
-    font-size: 20px;
-    padding: 20px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0 50px 0;
+    background-color: #b1a7a7;
+    display: flex;
+    justify-content:flex-end;
+    box-shadow: 100px #000000;
+}
+
+.menu ul{
+    display: inline-flex;
+    align-items: center;
+    background-color:#b1a7a7;
+}
+
+.menu ul li{
+    font-size: 10px;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s ease-out;
+}
+
+.menu ul li:hover::before{
+    width: 100%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    background-color: #b1a7a7;
+    display: block;
 }
 
 .contenido-principal{
@@ -34,9 +69,9 @@ header{
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
-    overflow: hidden;
+    overflow: auto;
     max-width: 1300px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -62,16 +97,12 @@ h2 , h4{
     align-self: flex-start;
 }
 
-h5{
-    font-size: 1rem;
-}
-
 .presentacion-foto img{
     width: 300px;
 }
 
 .sobre-mi-img img{
-    width: 400px;
+    width: 300px;
 }
 
 .sobre-mi-texto{
@@ -81,8 +112,8 @@ h5{
 .contenedor-tecnologias{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: space-between;
+    width: 85%;
+    justify-content: space-around;
     margin: auto;
     overflow: auto;
     max-width: 1300px;
@@ -93,16 +124,14 @@ h5{
 .tecnologias-titulo{
     font-size:30px;
     font-family: sans-serif;
-    width: 50%;
     align-self: flex-start;
+    margin-bottom: 20px;
 }
 
 .tecnologias-iconos{
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    align-self: center;
     font-size: 90px;
-    width: 100%;
-    padding: 40px;
 }
 
 .tecnologias-iconos i{
@@ -138,88 +167,111 @@ form label{
     background-color: #5e64c0;
 }
 
-@media (max-width: 576px){
-    header{
-        justify-content: center;
-    }
+.pie-de-pagina{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 0 40px 0;
+    background-color: #b1a7a7;
+}
 
-    .menu{
-        padding: 0;
-        font-size: 1rem;
+@media (max-width: 576px){
+    .menu ul{
+        width: 100%;
+        flex-direction: column;
     }
-    
+    .menu ul li a{
+        padding: 5px;
+    }
     .contenedor{
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 0;
+    }
+    .presentacion-nombre{
+        text-align: center;
     }
 
-    .contenedor-tecnologias{
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 20px;
+    .presentacion-foto{
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
-    .tecnologias-iconos{
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-    .presentacion-nombre {
-        padding-bottom: 40px;
+
+    .presentacion-foto img{
+        width: 100%;
     }
 
     h1{
-        text-align: center;
-        font-size:5rem;
+        font-size: 3rem;
     }
-
-    h2{
-        text-align: center;
+    
+    h2 ,h3, h4{
         font-size: 1.5rem;
+        align-self: flex-start;
     }
-
-    .sobre-mi-img img{
-        width: 280px;
+    
+    h5{
+        font-size: 1rem;
     }
-
-    .sobre-mi-texto{
-        padding-top: 40px;
-        text-align: left;
+    a{
+        font-size: 1rem;
     }
+    .pie-de-pagina{
+        text-align: center;
+        font-size: 0.6rem
+    }
+}
 
-    .formulario-cuerpo{
+@media (max-width: 735px){
+    .menu ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu ul li a{
+        padding: 5px;
+    }
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .presentacion-foto{
         padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .sobre-mi-img img{
+        width: 100%;
+    }
+        .pie-de-pagina{
+        text-align: center;
+        font-size: 0.6rem
     }
 }
 
 @media (max-width: 768px){
-    .contenedor{
-      padding: 30px 30px;
-    }
     .sobre-mi-texto{
-        padding-left: 40px;
+        padding: 40px;
+    }
+    .tecnologias-iconos i{
+        display: flex;
+        align-content: center;
+    }
+    
+}
+
+@media (max-width: 996px){
+    .sobre-mi-texto{
+        padding: 40px;
     }
 }
 
-@media (max-width: 992px){
+
+@media (max-width: 1300px){
     .contenedor{
-        padding: 40px 40px;
-      }
-
+        padding: 20px;
+    }
     .contenedor-tecnologias{
-        padding: 40px;
+        padding: 20px;
     }
-
-    .presentacion-nombre{
-       padding: auto;
-    }
-
-    .sobre-mi-texto{
-        padding-left: 40px;
-    }
-
     h5{
-        padding-right: 40px;
+        padding-right: 20px;
     }
 }
